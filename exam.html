@@ -86,6 +86,7 @@
 <div id="exam"><strong>(☞ﾟヮﾟ)☞ Z ZXZ Z C on set 2</strong></div>
 
 <script>
+    let currentSet = 1;
     const codeToKey = {
         81: ["Q", "Heater-1", "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3", "Chord-1", "https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"],
         87: ["W", "Heater-2", "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3", "Chord-2", "https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3"],
@@ -110,7 +111,6 @@
     }
     document.addEventListener("keydown", event => playAudio(event.keyCode));
 
-    let currentSet = 1;
     const changeSet = () => {
         if (currentSet == 1) {
             for (const key in codeToKey) {
