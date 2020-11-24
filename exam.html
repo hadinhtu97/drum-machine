@@ -1,45 +1,66 @@
 <div id="drum-machine">
-    <div id="display">Heater-1</div>
-    <button class="dumpad" id="Heater-1">
+    <div id="display">Click or press</div>
+    <button class="drum-pad" id="Heater-1" onclick="playAudio(81)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" class="clip" id="Q"></audio>
         Q
     </button>
-    <button class="dumpad" id="Heater-2">
+    <button class="drum-pad" id="Heater-2" onclick="playAudio(87)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" class="clip" id="W"></audio>
         W
     </button>
-    <button class="dumpad" id="Heater-3">
+    <button class="drum-pad" id="Heater-3" onclick="playAudio(69)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" class="clip" id="E"></audio>
         E
     </button>
     <br>
-    <button class="dumpad" id="Heater-4">
+    <button class="drum-pad" id="Heater-4" onclick="playAudio(65)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" class="clip" id="A"></audio>
         A
     </button>
-    <button class="dumpad" id="Clap">
+    <button class="drum-pad" id="Clap" onclick="playAudio(83)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" class="clip" id="S"></audio>
         S
     </button>
-    <button class="dumpad" id="Open-HH">
+    <button class="drum-pad" id="Open-HH" onclick="playAudio(68)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" class="clip" id="D"></audio>
         D
     </button>
     <br>
-    <button class="dumpad" id="Kick-n'-Hat">
+    <button class="drum-pad" id="Kick-n'-Hat" onclick="playAudio(90)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" class="clip" id="Z"></audio>
         Z
     </button>
-    <button class="dumpad" id="Kick">
+    <button class="drum-pad" id="Kick" onclick="playAudio(88)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" class="clip" id="X"></audio>
         X
     </button>
-    <button class="dumpad" id="Closed-HH">
+    <button class="drum-pad" id="Closed-HH" onclick="playAudio(67)">
         <audio src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" class="clip" id="C"></audio>
         C
     </button>
-</div>
 
+</div>
 <script>
-    
+    const codeToKey = {
+        81: ["Q", "Heater-1"],
+        87: ["W", "Heater-2"],
+        69: ["E", "Heater-3"],
+        65: ["A", "Heater-4"],
+        83: ["S", "Clap"],
+        68: ["D", "Open-HH"],
+        90: ["Z", "Kick-n'-Hat"],
+        88: ["X", "Kick"],
+        67: ["C", "Closed-HH"],
+
+    }
+    const playAudio = code => {
+        if (codeToKey.hasOwnProperty(code)) {
+            let audio = document.getElementById(codeToKey[code][0]);
+            let display = document.getElementById('display');
+            display.innerHTML = codeToKey[code][1];
+            audio.play();
+        }
+    }
+    document.addEventListener("keydown", event => playAudio(event.keyCode));
 </script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
