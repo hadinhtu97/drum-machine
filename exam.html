@@ -1,53 +1,57 @@
 <link rel="stylesheet" href="exam.css">
-<div id="drum-machine">
-    <div id="display"><strong>Click button or press key</strong></div>
-    <button class="drum-pad" id="sound-of-Q" onclick="playAudio(81)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" class="clip" id="Q"></audio>
-        Q
-    </button>
-    <button class="drum-pad" id="sound-of-W" onclick="playAudio(87)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" class="clip" id="W"></audio>
-        W
-    </button>
-    <button class="drum-pad" id="sound-of-E" onclick="playAudio(69)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" class="clip" id="E"></audio>
-        E
-    </button>
-    <br>
-    <button class="drum-pad" id="sound-of-A" onclick="playAudio(65)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" class="clip" id="A"></audio>
-        A
-    </button>
-    <button class="drum-pad" id="sound-of-S" onclick="playAudio(83)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" class="clip" id="S"></audio>
-        S
-    </button>
-    <button class="drum-pad" id="sound-of-D" onclick="playAudio(68)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" class="clip" id="D"></audio>
-        D
-    </button>
-    <br>
-    <button class="drum-pad" id="sound-of-Z" onclick="playAudio(90)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" class="clip" id="Z"></audio>
-        Z
-    </button>
-    <button class="drum-pad" id="sound-of-X" onclick="playAudio(88)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" class="clip" id="X"></audio>
-        X
-    </button>
-    <button class="drum-pad" id="sound-of-C" onclick="playAudio(67)">
-        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" class="clip" id="C"></audio>
-        C
-    </button>
+<div id="root">
+
+    <div id="drum-machine">
+        <div id="display"><strong>Play it!</strong></div>
+        <button class="drum-pad" id="sound-of-Q" onclick="playAudio(81)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" class="clip" id="Q"></audio>
+            Q
+        </button>
+        <button class="drum-pad" id="sound-of-W" onclick="playAudio(87)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" class="clip" id="W"></audio>
+            W
+        </button>
+        <button class="drum-pad" id="sound-of-E" onclick="playAudio(69)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" class="clip" id="E"></audio>
+            E
+        </button>
+        <br>
+        <button class="drum-pad" id="sound-of-A" onclick="playAudio(65)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" class="clip" id="A"></audio>
+            A
+        </button>
+        <button class="drum-pad" id="sound-of-S" onclick="playAudio(83)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" class="clip" id="S"></audio>
+            S
+        </button>
+        <button class="drum-pad" id="sound-of-D" onclick="playAudio(68)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" class="clip" id="D"></audio>
+            D
+        </button>
+        <br>
+        <button class="drum-pad" id="sound-of-Z" onclick="playAudio(90)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" class="clip" id="Z"></audio>
+            Z
+        </button>
+        <button class="drum-pad" id="sound-of-X" onclick="playAudio(88)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" class="clip" id="X"></audio>
+            X
+        </button>
+        <button class="drum-pad" id="sound-of-C" onclick="playAudio(67)">
+            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" class="clip" id="C"></audio>
+            C
+        </button>
+    </div>
+
+    <div id="config">
+        <div id="show-set"><strong><span style='color: #5e0080'>Set</span> 1</strong></div>
+        <button id="change-set" onclick="changeSet()">Change Set (R)</button>
+    </div>
+
+    <div id="exam">
+        <strong>(☞ﾟヮﾟ)☞ {Z ZXZ Z C} on set 2</strong>
+    </div>
 </div>
-<br>
-<div id="config">
-    <div id="show-set"><strong>Now is set 1</strong></div>
-    <button id="change-set" onclick="changeSet()">Change Set (R)</button>
-</div>
-<br>
-<div id="exam">
-    <strong>(☞ﾟヮﾟ)☞ Z ZXZ Z C on set 2</strong>
-</div>
+
 <script src="exam.js"></script>
 <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->

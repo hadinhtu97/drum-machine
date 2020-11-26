@@ -1,0 +1,60 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: monospace;
+}
+
+#root {
+    margin: 100px auto;
+    max-width: 400px;
+    text-align: center;
+    border: 5px double #5e0080;
+    padding: 20px;
+}
+
+#drum-machine {
+    margin: 20px;
+}
+
+#display {
+    margin: 5px;
+    font-size: 30px;
+    color: #dd4814;
+}
+
+.drum-pad {
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+}
+
+button {
+    font-family: monospace;
+    background-color: white;
+    color: #5e0080;
+    border: 1px solid #5e0080;
+}
+
+button:hover, button:focus {
+    background-color: cyan;
+    outline: none;
+}
+
+#config {
+    margin: 20px
+}
+
+#show-set {
+    margin: 20px;
+    font-size: 15px;
+    color: cyan;
+}
+
+#change-set {
+    width: 150px;
+    height: 40px;
+}
+
+#exam {
+    color: #dd4814;
+}

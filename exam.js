@@ -13,7 +13,9 @@ const codeToKey = {
 
 const playAudio = code => {
     if (codeToKey.hasOwnProperty(code)) {
+        let buttonId = 'sound-of-' + codeToKey[code][0];
         document.getElementById(codeToKey[code][0]).play();
+        document.getElementById(buttonId).focus();
         if (currentSet == 1) {
             document.getElementById('display').innerHTML = codeToKey[code][1];
         } else {
@@ -24,20 +26,21 @@ const playAudio = code => {
 document.addEventListener("keydown", event => playAudio(event.keyCode));
 
 const changeSet = () => {
+    document.getElementById('change-set').focus();
     if (currentSet == 1) {
         for (const key in codeToKey) {
             document.getElementById(codeToKey[key][0]).setAttribute("src", codeToKey[key][4])
         }
         currentSet = 2;
-        document.getElementById('show-set').innerHTML = "<strong>Now is set 2</strong>";
-        document.getElementById('display').innerHTML = "<strong>Click button or press key</strong>";
+        document.getElementById('show-set').innerHTML = "<strong><span style='color: #5e0080'>Set</span> 2</strong>";
+        document.getElementById('display').innerHTML = "<strong>Play it!</strong>";
     } else {
         for (const key in codeToKey) {
             document.getElementById(codeToKey[key][0]).setAttribute("src", codeToKey[key][2])
         }
         currentSet = 1;
-        document.getElementById('show-set').innerHTML = "<strong>Now is set 1</strong>";
-        document.getElementById('display').innerHTML = "<strong>Click button or press key</strong>";
+        document.getElementById('show-set').innerHTML = "<strong><span style='color: #5e0080'>Set</span> 1</strong>";
+        document.getElementById('display').innerHTML = "<strong>Play it!</strong>";
     }
 }
 document.addEventListener("keydown", event => {
